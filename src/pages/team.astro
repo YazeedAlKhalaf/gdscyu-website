@@ -1,0 +1,127 @@
+---
+import Layout from "../layouts/layout.astro";
+
+// Stuff
+import Spacer from "../components/ui/Spacer.astro";
+import ScrollUp from "../components/ui/ScrollUp.svelte";
+import TeamContainer from "../components/team/TeamContainer.astro";
+import TeamMember from "../components/team/TeamMember.astro";
+
+// Data
+import { leads, engineering, design, pr, content } from "../data/team";
+---
+
+<Layout
+  title="Our Team!"
+  decription="Meet the passionate and talented people behind GDSC Al-Yamamah! We are a dedicated group of students who are enthusiastic about technology and its - our - limitless possibilities."
+  layer="yellow"
+>
+  <section id="Team">
+    <!-- Wave Shape And Heading Text -->
+    <Spacer title="The Crew 😎" color="yellow" page="Team" />
+
+    <!-- Content -->
+    <div class="flex flex-col gap-y-10 px-2 py-5 lg:px-5">
+      <TeamContainer teamName="The Board 💼">
+        {
+          leads.map((member) => {
+            return (
+              <TeamMember
+                img={member.image}
+                name={member.name}
+                position={member.position}
+                twitter={member.social.twitter}
+                github={member.social.github}
+                instagram={member.social.instagram}
+                linkedin={member.social.linkedin}
+              />
+            );
+          })
+        }
+      </TeamContainer>
+      {/* Engineering Team */}
+      <TeamContainer teamName="Tech Kids 💻">
+        {
+          [...leads, ...engineering].map((member) => {
+            if (member.position.includes("Engineering"))
+              return (
+                <TeamMember
+                  img={member.image}
+                  name={member.name}
+                  position={member.position}
+                  twitter={member.social.twitter}
+                  github={member.social.github}
+                  instagram={member.social.instagram}
+                  linkedin={member.social.linkedin}
+                />
+              );
+          })
+        }
+      </TeamContainer>
+
+      {/* Design Team */}
+      <TeamContainer teamName="Art Department 🎨">
+        {
+          design.map((member) => {
+            return (
+              <TeamMember
+                img={member.image}
+                name={member.name}
+                position={member.position}
+                twitter={member.social.twitter}
+                github={member.social.github}
+                instagram={member.social.instagram}
+                linkedin={member.social.linkedin}
+              />
+            );
+          })
+        }
+      </TeamContainer>
+      {/* PR Team */}
+      <TeamContainer teamName="Communications and PR 📧">
+        {
+          [...leads, ...pr].map((member) => {
+            if (
+              member.position.includes("Public Relations") ||
+              member.position.includes("PR")
+            )
+              return (
+                <TeamMember
+                  img={member.image}
+                  name={member.name}
+                  position={member.position}
+                  twitter={member.social.twitter}
+                  github={member.social.github}
+                  instagram={member.social.instagram}
+                  linkedin={member.social.linkedin}
+                />
+              );
+          })
+        }
+      </TeamContainer>
+      {/* Content Creation Team */}
+      <TeamContainer teamName="Content Creators 🤳">
+        {
+          [...leads, ...content].map((member) => {
+            if (
+              member.position.includes("Content") ||
+              member.position.includes("Account")
+            )
+              return (
+                <TeamMember
+                  img={member.image}
+                  name={member.name}
+                  position={member.position}
+                  twitter={member.social.twitter}
+                  github={member.social.github}
+                  instagram={member.social.instagram}
+                  linkedin={member.social.linkedin}
+                />
+              );
+          })
+        }
+      </TeamContainer>
+    </div>
+  </section>
+  <ScrollUp client:only="svelte" />
+</Layout>

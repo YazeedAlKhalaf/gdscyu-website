@@ -1,0 +1,92 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import { Icon } from "astro-icon";
+
+const { img, name, position, twitter, github, instagram, linkedin } =
+  Astro.props;
+---
+
+<div class="w-full p-2">
+  <div class="flex h-full items-center rounded-3xl bg-gray-100 p-4">
+    {
+      img ? (
+        <Image
+          src={img}
+          class="mr-4 h-20 w-20 flex-shrink-0 overflow-hidden rounded-full object-cover object-center"
+          alt={`${name}'s Image`}
+          width={250}
+          height={250}
+          format="avif"
+        />
+      ) : (
+        <img
+          alt={`${name}'s Initial`}
+          class="mr-4 h-20 w-20 flex-shrink-0 overflow-hidden rounded-full object-cover object-center"
+          src={`/content/members/initials/${name.charAt().toUpperCase()}.svg`}
+        />
+      )
+    }
+
+    <div class="flex-grow">
+      <h2 class="text-xl font-medium tracking-wide text-black">{name}</h2>
+      <div class="gap-x-3 md:flex">
+        <p class="text-lg text-gray-800">{position}</p>
+        {/* Social Icons */}
+        {
+          github || twitter || instagram || linkedin ? (
+            <div class="mt-1 flex gap-x-3">
+              {twitter && (
+                <a
+                  href={twitter}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${name}'s Twitter Account`}
+                  class="hover:scale-110"
+                >
+                  <Icon name="fa:twitter" class="h-5 w-5 text-twitter-blue" />
+                </a>
+              )}
+              {github && (
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${name}'s GitHub Profile`}
+                  class="hover:scale-110"
+                >
+                  <Icon name="fa:github" class="h-5 w-5 text-slate-800" />
+                </a>
+              )}
+              {instagram && (
+                <a
+                  href={instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${name}'s Instagram Account`}
+                  class="hover:scale-110"
+                >
+                  <Icon name="fa:instagram" class="h-5 w-5 text-dark-pink" />
+                </a>
+              )}
+              {linkedin && (
+                <a
+                  href={linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${name}'s LinkedIn Profile`}
+                  class="hover:scale-110"
+                >
+                  <Icon
+                    name="fa:linkedin-square"
+                    class="h-5 w-5 text-linkedin-blue"
+                  />
+                </a>
+              )}
+            </div>
+          ) : null
+        }
+      </div>
+    </div>
+  </div>
+</div>

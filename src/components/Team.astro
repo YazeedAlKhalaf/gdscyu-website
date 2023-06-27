@@ -1,0 +1,41 @@
+---
+// Stuff
+import Spacer from "./ui/Spacer.astro";
+import TeamContainer from "./team/TeamContainer.astro";
+import TeamMember from "./team/TeamMember.astro";
+// Data
+import { leads } from "../data/team";
+---
+
+<section id="Team" aria-label="Meet The Team Section">
+  <!-- Wave Shape And Heading Text -->
+  <Spacer title="Meet The Team!" color="yellow" page={false} />
+
+  <!-- Content -->
+  <div
+    class="flex flex-col items-center gap-y-10 px-2 py-5 md:gap-y-12 lg:px-5"
+  >
+    <TeamContainer teamName="">
+      {
+        leads.map((member) => {
+          return (
+            <TeamMember
+              img={member.image}
+              name={member.name}
+              position={member.position}
+              twitter={member.social.twitter}
+              github={member.social.github}
+              instagram={member.social.instagram}
+              linkedin={member.social.linkedin}
+            />
+          );
+        })
+      }
+    </TeamContainer>
+    <a
+      href="/team"
+      class="max-w-sm rounded-xl bg-google-yellow px-2 py-3 text-center text-lg font-medium text-white hover:scale-105 md:px-4 md:text-xl"
+      >See the Rest of Our Cool Team 😎
+    </a>
+  </div>
+</section>

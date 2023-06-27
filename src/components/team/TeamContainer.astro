@@ -1,0 +1,21 @@
+---
+interface Props {
+  teamName: string;
+}
+
+const { teamName } = Astro.props;
+---
+
+{
+  teamName ? (
+    <h1 class="px-2 text-center text-4xl font-bold dark:text-white md:text-5xl">
+      {teamName}
+    </h1>
+  ) : null
+}
+
+<div
+  class="grid w-full flex-wrap justify-items-center gap-y-4 md:grid-cols-2 lg:grid-cols-3"
+>
+  <slot />
+</div>

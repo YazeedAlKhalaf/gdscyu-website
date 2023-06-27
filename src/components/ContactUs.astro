@@ -1,0 +1,98 @@
+---
+import Spacer from "./ui/Spacer.astro";
+import LogoBreak from "./ui/LogoBreak.astro";
+import SocialLinks from "./ui/SocialLinks.astro";
+---
+
+<section id="ContactUs" aria-label="Contact Us Section">
+  <!-- Wave Shape And Heading Text -->
+  <Spacer title="Connect With Us 📩" color="green" page={false} />
+  <!-- Content -->
+
+  <div class="container mx-auto p-5">
+    <div class="mx-auto md:w-2/3 lg:w-1/2">
+      <form
+        name="Contact-Us"
+        method="POST"
+        data-netlify="true"
+        class="-m-2 flex flex-wrap"
+      >
+        <!-- First Name Input -->
+        <div class="w-1/2 p-2">
+          <div class="relative">
+            <label for="first-name" class="leading-8">First Name:</label>
+            <input
+              type="text"
+              required
+              id="first-name"
+              name="first-name"
+              class="contactInput"
+            />
+          </div>
+        </div>
+        <!-- Last Name Input -->
+        <div class="w-1/2 p-2">
+          <div class="relative">
+            <label for="last-name" class="leading-8">Last Name:</label>
+            <input
+              type="text"
+              required
+              id="last-name"
+              name="last-name"
+              class="contactInput"
+            />
+          </div>
+        </div>
+        <!-- Email Input -->
+        <div class="w-full p-2">
+          <div class="relative">
+            <label for="email" class="leading-8">Your Email:</label>
+            <input
+              type="email"
+              required
+              id="email"
+              name="email"
+              class="contactInput"
+            />
+          </div>
+        </div>
+        <!-- Message Input -->
+        <div class="w-full p-2">
+          <div class="relative">
+            <label for="message" class="leading-8">Your Message:</label>
+            <textarea
+              required
+              id="message"
+              name="message"
+              class="contactInput h-32 resize-none leading-6"></textarea>
+          </div>
+        </div>
+        <!-- Send Button -->
+        <div class="w-full p-2">
+          <button
+            type="submit"
+            class="mx-auto flex rounded bg-google-green px-8 py-2 hover:scale-105"
+          >
+            <p class="text-lg font-bold text-white">Send</p>
+          </button>
+        </div>
+        <!-- Seperator Line -->
+        <LogoBreak src="/gdsc.svg" />
+        <!-- Email, Location -->
+        <div class="w-full pb-2 text-center">
+          <a
+            href="mailto:gdsc@yu.edu.sa"
+            class="text-google-green underline-offset-8 hover:underline"
+            >gdsc@yu.edu.sa</a
+          >
+          <p class="my-5 leading-normal">
+            Al Qassim Highway,
+            <br />Riyadh Region 11512
+          </p>
+          <!-- Social Icons -->
+          <SocialLinks />
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

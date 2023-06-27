@@ -1,0 +1,32 @@
+---
+// stuff
+import Layout from "../layouts/layout.astro";
+import Header from "../components/ui/Header.svelte";
+import ScrollUp from "../components/ui/ScrollUp.svelte";
+import ScrollToSection from "../components/utils/ScrollToSection.svelte";
+
+// sections
+import Hero from "../components/Hero.astro";
+import Events from "../components/Events.astro";
+import Projects from "../components/Projects.astro";
+import Team from "../components/Team.astro";
+import ContactUs from "../components/ContactUs.astro";
+---
+
+<Layout
+  title="GDSC Al-Yamamah University"
+  decription="Welcome to the official website of the Google Developer Student Club at Al-Yamamah University! Discover a world of innovation, learning, and collaboration as we empower students to explore and excel."
+  layer="blue"
+>
+  <Header client:only="svelte" />
+  <main>
+    <Hero />
+    <Events />
+    <Projects />
+    <Team />
+    <ContactUs />
+  </main>
+  <ScrollUp client:only="svelte" />
+</Layout>
+
+<ScrollToSection client:only="svelte" />

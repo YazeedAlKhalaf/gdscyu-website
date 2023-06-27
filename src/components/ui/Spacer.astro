@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon";
+import GoBack from "./GoBack.svelte";
+import DarkMode from "./DarkMode.svelte";
+
+interface Props {
+  title: string;
+  color: string;
+  // used to fill the goBackHref prop of the GoBack component
+  page: string | boolean;
+}
+
+const { title, color, page } = Astro.props;
+---
+
+<div>
+  {/* top layer */}
+  <div class={`spacer ${color}-layer1`}></div>
+  {/* middle layer */}
+  <div class={`bg-google-${color} flex justify-between p-2 text-white`}>
+    {/* button */}
+    {/* fill with false to hide, fill with an href to scroll to on:click */}
+    <GoBack client:load goBackHref={page}>
+      <Icon
+        name="fa:arrow-left"
+        class="ml-3 h-7 w-7 hover:scale-110 md:h-12 md:w-12"
+      />
+    </GoBack>
+    {/* title */}
+    <h1 class="w-full px-2 text-center text-4xl font-bold md:text-5xl">
+      {title}
+    </h1>
+    {/* Dark Mode Toggle */}
+    {
+      page ? (
+        <DarkMode
+          client:only="svelte"
+          Style="mr-3 h-7 w-7 hover:scale-110 md:h-12 md:w-12"
+        />
+      ) : (
+        <div class="mr-3 h-7 w-7 md:h-12 md:w-12 " />
+      )
+    }
+    {/* middle layer end */}
+  </div>
+  {/* bottom layer */}
+  <div class={`spacer ${color}-layer2`}></div>
+</div>

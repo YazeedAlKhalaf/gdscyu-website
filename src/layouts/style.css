@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* default spacer for all devices */
+.spacer {
+  aspect-ratio: 960/100;
+  @apply w-full bg-cover bg-center bg-no-repeat;
+}
+
+/* changing ratio for mobile devices */
+@media screen and (max-width: 767px) {
+  .spacer {
+    aspect-ratio: 960/200;
+  }
+}
+
+/* this was created by coincidence & i've been using it ever since */
+
+.default {
+  @apply bg-slate-200 text-black dark:bg-[#282C34] dark:text-slate-100;
+}
+
+/* a bunch of layers :D */
+
+.blue-layer1 {
+  background-image: url("/assets/layers/blue-layer.svg");
+}
+.blue-layer2 {
+  background-image: url("/assets/layers/blue-layer.svg");
+  transform: rotate(180deg);
+}
+
+.red-layer1 {
+  background-image: url("/assets/layers/red-layer.svg");
+}
+.red-layer2 {
+  background-image: url("/assets/layers/red-layer.svg");
+  transform: rotate(180deg);
+}
+
+.yellow-layer1 {
+  background-image: url("/assets/layers/yellow-layer.svg");
+}
+.yellow-layer2 {
+  background-image: url("/assets/layers/yellow-layer.svg");
+  transform: rotate(180deg);
+}
+
+.green-layer1 {
+  background-image: url("/assets/layers/green-layer.svg");
+}
+.green-layer2 {
+  background-image: url("/assets/layers/green-layer.svg");
+  transform: rotate(180deg);
+}
+
+/* contact us section */
+
+.contactInput {
+  @apply w-full rounded-lg border border-gray-300 px-3 py-1 leading-8 text-gray-800 outline-none transition-colors duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-google-green dark:bg-gray-100;
+}

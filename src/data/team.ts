@@ -2,7 +2,7 @@ export const leads = [
   {
     name: "Yazeed Al-Khalaf",
     position: "Club Lead",
-    image: "/content/members/leads/Yazeed Al-Khalaf.jpeg",
+    image: "/images/members/leads/Yazeed Al-Khalaf.jpeg",
     social: {
       twitter: "https://twitter.com/yazeedalkhalaf",
       github: "https://github.com/YazeedAlKhalaf",
@@ -24,7 +24,7 @@ export const leads = [
   {
     name: "Khalil Melhem",
     position: "Engineering Lead",
-    image: "/content/members/leads/Khalil Melhem.jpg",
+    image: "/images/members/leads/Khalil Melhem.jpg",
     social: {
       twitter: "https://twitter.com/pewpewded",
       github: "https://github.com/pewpewded",
@@ -57,7 +57,7 @@ export const leads = [
   {
     name: "Mishal Al-Harbi",
     position: "Event Planning Lead",
-    image: "/content/members/leads/Mishal Al-Harbi.jpg",
+    image: "/images/members/leads/Mishal Al-Harbi.jpg",
     social: {
       twitter: null,
       github: null,
@@ -68,7 +68,7 @@ export const leads = [
   {
     name: "Mohammed Al-Brahim",
     position: "Club Treasurer",
-    image: "/content/members/leads/Mohammed Al-Brahim.png",
+    image: "/images/members/leads/Mohammed Al-Brahim.png",
     social: {
       twitter: "https://twitter.com/moh_albrahim",
       github: null,
@@ -82,7 +82,7 @@ export const engineering = [
   {
     name: "Abdullah Meraj",
     position: "Engineering Team",
-    image: "/content/members/Abdullah Miraj.png",
+    image: "/images/members/Abdullah Miraj.png",
     social: {
       twitter: null,
       github: "https://github.com/Abd-404",
@@ -93,7 +93,7 @@ export const engineering = [
   {
     name: "SalahEddin Thabet",
     position: "Engineering Team",
-    image: "/content/members/SalahEddin Thabet.jpeg",
+    image: "/images/members/SalahEddin Thabet.jpeg",
     social: {
       twitter: null,
       github: "https://github.com/SEDDINT",
@@ -107,7 +107,7 @@ export const design = [
   {
     name: "Khaled Hazzam",
     position: "Design Team",
-    image: "/content/members/Khaled Hazzam.jpg",
+    image: "/images/members/Khaled Hazzam.jpg",
     social: {
       twitter: null,
       github: "https://github.com/KadeHZ",
@@ -118,7 +118,7 @@ export const design = [
   {
     name: "Osama Khlefawi",
     position: "Design Team",
-    image: "/content/members/Osama Khlefawi.jpg",
+    image: "/images/members/Osama Khlefawi.jpg",
     social: {
       twitter: null,
       github: "https://github.com/Puppetie",

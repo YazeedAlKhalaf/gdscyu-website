@@ -12,6 +12,6 @@
       <OrbitControls autoRotate enableZoom={false} />
     </PerspectiveCamera>
     <!-- Logo -->
-    <GLTF useDraco={true} scale={4.5} url="/assets/3d-models/gdsc-logo.glb" />
+    <GLTF useDraco={true} scale={4.5} url="/models/gdsc-logo.glb" />
   </Canvas>
 </div>

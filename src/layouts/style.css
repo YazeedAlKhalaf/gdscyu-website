@@ -30,34 +30,34 @@
 /* a bunch of layers :D */
 
 .blue-layer1 {
-  background-image: url("/assets/layers/blue-layer.svg");
+  background-image: url("/images/layers/blue-layer.svg");
 }
 .blue-layer2 {
-  background-image: url("/assets/layers/blue-layer.svg");
+  background-image: url("/images/layers/blue-layer.svg");
   transform: rotate(180deg);
 }
 
 .red-layer1 {
-  background-image: url("/assets/layers/red-layer.svg");
+  background-image: url("/images/layers/red-layer.svg");
 }
 .red-layer2 {
-  background-image: url("/assets/layers/red-layer.svg");
+  background-image: url("/images/layers/red-layer.svg");
   transform: rotate(180deg);
 }
 
 .yellow-layer1 {
-  background-image: url("/assets/layers/yellow-layer.svg");
+  background-image: url("/images/layers/yellow-layer.svg");
 }
 .yellow-layer2 {
-  background-image: url("/assets/layers/yellow-layer.svg");
+  background-image: url("/images/layers/yellow-layer.svg");
   transform: rotate(180deg);
 }
 
 .green-layer1 {
-  background-image: url("/assets/layers/green-layer.svg");
+  background-image: url("/images/layers/green-layer.svg");
 }
 .green-layer2 {
-  background-image: url("/assets/layers/green-layer.svg");
+  background-image: url("/images/layers/green-layer.svg");
   transform: rotate(180deg);
 }
 

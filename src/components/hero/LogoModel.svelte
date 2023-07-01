@@ -11,6 +11,10 @@
       <OrbitControls autoRotate enableDamping enableZoom={false} />
     </T.PerspectiveCamera>
     <!-- Logo -->
-    <GLTF url="/models/gdsc-logo.glb" useDraco={true} scale={4.5} />
+    <GLTF
+      url="/models/meshopt/gzip/gdsc-logo.glb"
+      useMeshopt={true}
+      scale={4.5}
+    />
   </Canvas>
 </div>

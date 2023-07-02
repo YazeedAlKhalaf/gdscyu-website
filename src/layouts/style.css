@@ -8,6 +8,15 @@
   font-family: "DM Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* default spacer for all devices */
 .spacer {
   aspect-ratio: 960/100;

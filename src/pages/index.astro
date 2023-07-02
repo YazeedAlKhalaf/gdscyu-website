@@ -1,15 +1,22 @@
 ---
-// stuff
+// Default Layout
 import Layout from "../layouts/layout.astro";
-import Header from "../components/ui/Header.svelte";
-import ScrollUp from "../components/ui/ScrollUp.svelte";
-import ScrollToSection from "../components/utils/ScrollToSection.svelte";
 
-// sections
+// ScrollUp & ScrollToSection
+import ScrollUp from "../components/ui/ScrollUp.svelte";
+
+// Header
+import Header from "../components/ui/Header.astro";
+
+// Hero
 import Hero from "../components/Hero.astro";
+
+// Content & Team Sections
 import Events from "../components/Events.astro";
 import Projects from "../components/Projects.astro";
 import Team from "../components/Team.astro";
+
+// Contact Us
 import ContactUs from "../components/ContactUs.astro";
 ---
 
@@ -18,15 +25,11 @@ import ContactUs from "../components/ContactUs.astro";
   decription="Welcome to the official website of the Google Developer Student Club at Al-Yamamah University! Discover a world of innovation, learning, and collaboration as we empower students to explore and excel."
   layer="blue"
 >
-  <Header client:only="svelte" />
-  <main>
-    <Hero />
-    <Events />
-    <Projects />
-    <Team />
-    <ContactUs />
-  </main>
+  <Header />
+  <Hero />
+  <Events />
+  <Projects />
+  <Team />
+  <ContactUs />
   <ScrollUp client:only="svelte" />
 </Layout>
-
-<ScrollToSection client:only="svelte" />

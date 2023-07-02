@@ -1,6 +1,5 @@
 <script>
   import { onMount, onDestroy } from "svelte";
-  import * as animateScroll from "svelte-scrollto-next";
   import Icon from "@iconify/svelte";
 
   const colors = {
@@ -50,7 +49,11 @@
     class="fixed bottom-8 right-8 z-50 {colors[
       activeSection
     ]} rounded-3xl p-2 text-white"
-    on:click={() => animateScroll.scrollToTop()}
+    on:click={() => {
+      window.scrollTo({
+        top: 0,
+      });
+    }}
   >
     <Icon icon="ri:arrow-up-line" class="h-7 w-7" />
   </button>

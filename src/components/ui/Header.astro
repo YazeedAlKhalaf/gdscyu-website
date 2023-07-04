@@ -1,0 +1,70 @@
+---
+import Icon from "astro-icon";
+
+import DarkMode from "./DarkMode.astro";
+
+import { navData } from "../../data/nav";
+---
+
+<header class="font-bold">
+  <nav>
+    <div class="main z-50 flex w-full justify-between p-5">
+      <DarkMode Style="h-9 w-9" />
+      <button id="menu" aria-label="Toggle Menu">
+        <Icon
+          name="ri:menu-4-fill"
+          class="toggleHidden h-9 w-9 transition duration-300 ease-in-out lg:hover:scale-110"
+        />
+        <Icon
+          name="ri:close-fill"
+          class="toggleHidden hidden h-9 w-9 transition duration-300 ease-in-out lg:hover:scale-110"
+        />
+      </button>
+    </div>
+    <div class="toggleHidden hidden">
+      <div
+        class="default fixed z-40 flex h-[100svh] w-screen flex-col items-center justify-center gap-y-10"
+      >
+        {
+          navData.map((link) => (
+            <a
+              href={link.href}
+              class="link text-2xl transition duration-300 ease-in-out lg:hover:scale-110"
+            >
+              {link.name}
+            </a>
+          ))
+        }
+        <img
+          src="/images/ui/header-guy.svg"
+          alt="Our Cute Astronaut Guy :)"
+          class="absolute bottom-0 right-0 transition duration-300 ease-in-out lg:hover:scale-110"
+        />
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuButton = document.getElementById("menu");
+  const mainDiv = document.querySelector(".main");
+  const links = document.querySelectorAll(".link");
+
+  menuButton?.addEventListener("click", () => {
+    toggleNav();
+  });
+
+  links?.forEach((link) => {
+    link.addEventListener("click", () => {
+      toggleNav();
+    });
+  });
+
+  const toggleNav = () => {
+    mainDiv?.classList.toggle("fixed");
+    document.body.classList.toggle("overflow-hidden");
+    [...document.querySelectorAll(".toggleHidden")].forEach((Element) => {
+      Element.classList.toggle("hidden");
+    });
+  };
+</script>

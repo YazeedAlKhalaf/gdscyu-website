@@ -8,7 +8,7 @@ const { img, name, position, twitter, github, instagram, linkedin } =
 ---
 
 <div class="w-full p-2">
-  <div class="flex h-full items-center rounded-3xl bg-gray-100 p-4">
+  <div class="flex h-full items-center rounded-3xl bg-gray-50 p-4">
     {
       img ? (
         <Image
@@ -29,9 +29,11 @@ const { img, name, position, twitter, github, instagram, linkedin } =
     }
 
     <div class="flex-grow">
-      <h2 class="text-xl font-medium tracking-wide text-black">{name}</h2>
+      <h1 class="text-lg font-semibold tracking-wide text-gray-900 md:text-xl">
+        {name}
+      </h1>
       <div class="gap-x-3 md:flex">
-        <p class="text-lg text-gray-800">{position}</p>
+        <p class="text-md font-medium text-gray-800 md:text-lg">{position}</p>
         {/* Social Icons */}
         {
           github || twitter || instagram || linkedin ? (

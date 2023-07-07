@@ -1,10 +1,11 @@
 ---
 // Stuff
-import Spacer from "./ui/Spacer.astro";
-import TeamContainer from "./team/TeamContainer.astro";
-import TeamMember from "./team/TeamMember.astro";
+import Spacer from "../ui/Spacer.astro";
+import TeamContainer from "../team/TeamContainer.astro";
+import TeamMember from "../team/TeamMember.astro";
+import TeamButton from "../team/TeamButton.astro";
 // Data
-import { leads } from "../data/team";
+import { leads } from "../../data/team";
 ---
 
 <section id="Team" aria-label="Meet The Team Section">
@@ -32,10 +33,6 @@ import { leads } from "../data/team";
         })
       }
     </TeamContainer>
-    <a
-      href="/team"
-      class="max-w-sm rounded-xl bg-google-yellow px-2 py-3 text-center text-lg font-medium text-white hover:scale-105 md:px-4 md:text-xl"
-      >See the Rest of Our Cool Team 😎
-    </a>
+    <TeamButton />
   </div>
 </section>

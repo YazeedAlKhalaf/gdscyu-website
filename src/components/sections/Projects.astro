@@ -1,9 +1,9 @@
 ---
 import { Icon } from "astro-icon";
 
-import Spacer from "./ui/Spacer.astro";
+import Spacer from "../ui/Spacer.astro";
 // Data
-import { projectsData } from "../data/projects";
+import { projectsData } from "../../data/projects";
 ---
 
 <section id="Projects" aria-label="Projects Showcase Section">
@@ -25,7 +25,7 @@ import { projectsData } from "../data/projects";
                 />
 
                 {/* Hover Content */}
-                <div class="relative z-10 flex w-full flex-col items-center justify-center gap-y-6 px-8 py-[4.5rem] text-center opacity-0 hover:opacity-100 lg:transition lg:duration-100 lg:ease-in-out">
+                <div class="relative z-10 flex w-full flex-col items-center justify-center gap-y-6 px-8 py-[4.5rem] text-center opacity-0 transition duration-100 ease-in-out hover:opacity-100">
                   <h1 class="text-lg font-bold tracking-widest text-google-red">
                     {project.name}
                   </h1>
@@ -41,18 +41,16 @@ import { projectsData } from "../data/projects";
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Github Link"
-                      class="text-slate-200  hover:text-white"
                     >
-                      <Icon name="ri:github-fill" class="h-8 w-8" />
+                      <Icon name="ri:github-fill" />
                     </a>
                     <a
                       href={project.Link}
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Project Link"
-                      class="text-slate-200 hover:text-white"
                     >
-                      <Icon name="line-md:external-link" class="h-8 w-8" />
+                      <Icon name="line-md:external-link" />
                     </a>
                   </div>
                 </div>
@@ -60,7 +58,7 @@ import { projectsData } from "../data/projects";
                 <div class="absolute inset-0 bg-black opacity-50" />
                 <div class="absolute inset-0 flex items-center justify-center px-8 group-hover:invisible">
                   <div class="text-center text-slate-100">
-                    <h1 class="text-xl font-black">{project.name}</h1>
+                    <h1 class="text-xl font-bold">{project.name}</h1>
                   </div>
                 </div>
               </div>
@@ -71,3 +69,9 @@ import { projectsData } from "../data/projects";
     </div>
   </div>
 </section>
+
+<style>
+  svg {
+    @apply h-8 w-8 text-slate-100 transition duration-300 ease-in-out hover:scale-105;
+  }
+</style>

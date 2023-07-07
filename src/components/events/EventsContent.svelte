@@ -32,7 +32,7 @@
 
           <!-- Hover Content -->
           <div
-            class="relative z-10 flex w-full flex-col items-center justify-center gap-y-10 px-6 py-14 text-center text-slate-100 opacity-0 hover:opacity-100 lg:transition lg:duration-100 lg:ease-in-out"
+            class="relative z-10 flex w-full flex-col items-center justify-center gap-y-10 px-6 py-14 text-center text-slate-100 opacity-0 transition duration-100 ease-in-out hover:opacity-100"
           >
             <div>
               <h1
@@ -40,7 +40,7 @@
               >
                 {event.title}
               </h1>
-              <p class="font-medium tracking-wider md:text-lg">
+              <p class="font-semibold tracking-wider md:text-lg">
                 {event.type}
               </p>
             </div>
@@ -55,8 +55,8 @@
             class="absolute inset-0 flex items-center justify-center group-hover:invisible"
           >
             <div class="flex flex-col text-center text-slate-100">
-              <h1 class="text-xl font-black md:text-3xl">{event.title}</h1>
-              <p class="font-medium md:text-xl">{event.type}</p>
+              <h1 class="text-xl font-extrabold md:text-3xl">{event.title}</h1>
+              <p class="font-bold md:text-xl">{event.type}</p>
             </div>
           </div>
         </div>

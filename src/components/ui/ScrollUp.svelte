@@ -48,7 +48,7 @@
     aria-label="Scroll to the top"
     class="fixed bottom-8 right-8 z-50 {colors[
       activeSection
-    ]} rounded-3xl p-2 text-white"
+    ]} rounded-3xl p-2 text-white transition duration-300 ease-in-out hover:scale-105"
     on:click={() => {
       window.scrollTo({
         top: 0,

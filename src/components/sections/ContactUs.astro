@@ -1,0 +1,39 @@
+---
+import Spacer from "../ui/Spacer.astro";
+
+import Form from "../contactUs/Form.astro";
+
+import LogoBreak from "../contactUs/LogoBreak.astro";
+
+import SocialLinks from "../contactUs/SocialLinks.astro";
+---
+
+<section id="ContactUs" aria-label="Contact Us Section">
+  <!-- Wave Shape And Heading Text -->
+  <Spacer title="Connect With Us 📩" color="green" page={false} />
+  <!-- Content -->
+
+  <div class="container mx-auto p-5">
+    <div class="mx-auto md:w-2/3 lg:w-1/2">
+      <Form />
+      <!-- Seperator Line -->
+      <LogoBreak src="/images/logos/gdsc.svg" />
+      <!-- Email, Location -->
+      <div class="w-full pb-2 text-center">
+        <a
+          href="mailto:gdsc@yu.edu.sa"
+          class="relative border-b-2 border-transparent font-medium text-google-green transition duration-300 ease-in-out hover:border-google-green"
+        >
+          gdsc@yu.edu.sa
+        </a>
+        <p class="my-5 font-medium leading-normal">
+          Al Qassim Highway,
+          <br />
+          Riyadh Region 11512
+        </p>
+        <!-- Social Icons -->
+        <SocialLinks />
+      </div>
+    </div>
+  </div>
+</section>

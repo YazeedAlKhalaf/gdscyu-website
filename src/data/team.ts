@@ -178,7 +178,7 @@ export const pr = [
 export const content = [
   {
     name: "Maryam Abdulaziz",
-    position: "Instagram Account Manager",
+    position: "Account Manager",
     image: null,
     social: {
       twitter: null,
@@ -189,7 +189,7 @@ export const content = [
   },
   {
     name: "Maya Al-Saeed",
-    position: "Twitter Account Manager",
+    position: "Account Manager",
     image: null,
     social: {
       twitter: null,

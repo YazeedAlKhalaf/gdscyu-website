@@ -10,7 +10,7 @@ import { Icon } from "astro-icon";
     aria-label="Our Twitter Account"
     class="hover:text-twitter-blue"
   >
-    <Icon name="fa:twitter" class="h-6 w-6" />
+    <Icon name="fa:twitter" />
   </a>
   <a
     href="https://www.instagram.com/GDSC_YU/"
@@ -19,7 +19,7 @@ import { Icon } from "astro-icon";
     aria-label="Our Instagram Account"
     class="hover:text-dark-pink"
   >
-    <Icon name="fa:instagram" class="h-6 w-6" />
+    <Icon name="fa:instagram" />
   </a>
   <a
     href="https://github.com/GDSC-YU"
@@ -28,7 +28,7 @@ import { Icon } from "astro-icon";
     aria-label="Our GitHub Org"
     class="hover:text-github-purple"
   >
-    <Icon name="fa:github" class="h-6 w-6" />
+    <Icon name="fa:github" />
   </a>
   <a
     href="https://linkedin.com/company/gdsc-yu"
@@ -37,6 +37,15 @@ import { Icon } from "astro-icon";
     aria-label="Our LinkedIn Page"
     class="hover:text-linkedin-blue"
   >
-    <Icon name="fa:linkedin-square" class="h-6 w-6" />
+    <Icon name="fa:linkedin-square" />
   </a>
 </span>
+
+<style>
+  a {
+    @apply transition duration-300 ease-in-out;
+  }
+  svg {
+    @apply h-6 w-6;
+  }
+</style>

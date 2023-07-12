@@ -1,17 +1,10 @@
 ---
-import { Icon } from "astro-icon";
-
-import GoBack from "./GoBack.svelte";
-
-import DarkMode from "./DarkMode.astro";
-
 interface Props {
   title: string;
   color: string;
-  page: boolean;
 }
 
-const { title, color, page } = Astro.props;
+const { title, color } = Astro.props;
 ---
 
 <div>
@@ -19,25 +12,10 @@ const { title, color, page } = Astro.props;
   <div class={`spacer ${color}-layer1`}></div>
   {/* middle layer */}
   <div class={`bg-google-${color} flex justify-between p-2 text-white`}>
-    {/* button */}
-    <GoBack client:load visible={page}>
-      <Icon
-        name="fa:arrow-left"
-        class="ml-3 h-7 w-7 text-black hover:scale-110 dark:text-slate-100 md:h-12 md:w-12"
-      />
-    </GoBack>
     {/* title */}
     <h1 class="w-full px-2 text-center text-4xl font-bold md:text-5xl">
       {title}
     </h1>
-    {/* Dark Mode Toggle */}
-    {
-      page ? (
-        <DarkMode Style="mr-3 h-7 w-7 md:h-12 md:w-12" />
-      ) : (
-        <div class="mr-3 h-7 w-7 md:h-12 md:w-12 " />
-      )
-    }
     {/* middle layer end */}
   </div>
   {/* bottom layer */}

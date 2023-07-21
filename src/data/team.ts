@@ -26,8 +26,8 @@ export const leads = [
     position: "Engineering Lead",
     image: "/images/members/leads/Khalil Melhem.jpg",
     social: {
-      twitter: "https://twitter.com/pewpewded",
-      github: "https://github.com/pewpewded",
+      twitter: "https://twitter.com/g9wz_",
+      github: "https://github.com/g9wz",
       instagram: null,
       linkedin: "https://linkedin.com/in/khalil-melhem/",
     },

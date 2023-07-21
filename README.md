@@ -8,11 +8,11 @@
 
 </div>
 
-This is the google developer student club at Al-Yamamah University official website, it is built using [Astro](https://astro.build/), [Svelte](https://svelte.dev/), and [Tailwind CSS](https://tailwindcss.com/) <3.
+This is the Google developer student club at Al-Yamamah University official website, it is built using [Astro](https://astro.build/), [Svelte](https://svelte.dev/), and [Tailwind CSS](https://tailwindcss.com/) <3.
 
-Our website is the hub for anyone interested in technology and software development 🧑‍💻. We announce various events and workshops, led by experts in the field. We showcase our projects (finished and upcoming), and our cool team members 😎.
+There we announce various events, challenges, and workshops, led by experts in the field. We showcase projects that we worked on and tease about upcoming ones, and our very cool team members 😎 <sup> who made it all possible!</sup>
 
-P.S We also have a cool looking GDSC 3D model ;)
+P.S. We also have a cool looking GDSC 3D model ;)
 
 ## Contributing 🤝
 

@@ -4,21 +4,45 @@ import "./style.css";
 interface Props {
   title: string;
   layer: string;
-  decription: string;
+  description: string;
 }
 
-const { title, layer, decription } = Astro.props;
+const ogImage = "https://gdscyu.com/opengraph.jpeg";
+const siteURL = "https://gdscyu.com/";
+
+const { title, layer, description } = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Twitter -->
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+    <meta property="twitter:url" content={siteURL} />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <!-- Facebook -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={decription} />
+
+    <!-- Primary Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
     <link
       rel="preload"
       href={`/images/layers/${layer}-layer.svg`}

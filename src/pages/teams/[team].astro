@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/layout.astro";
+
+// Stuff
+import Spacer from "../../components/ui/Spacer.astro";
+import ScrollUp from "../../components/ui/ScrollUp.svelte";
+import TeamContainer from "../../components/team/TeamContainer.astro";
+
+export function getStaticPaths() {
+  return [{ params: { team: "2022-2023" } }];
+}
+
+const { team } = Astro.params;
+---
+
+<Layout
+  title={`${team} Team!`}
+  description={`Meet the passionate and talented people behind GDSC Al-Yamamah during ${team}! We are a dedicated group of students who are enthusiastic about technology and its - our - limitless possibilities.`}
+  layer="yellow"
+>
+  <section>
+    <!-- Wave Shape And Heading Text -->
+    <Spacer
+      title={team === "2022-2023"
+        ? "The Founding Team 😎"
+        : `The ${team} Crew 😎`}
+      color="yellow"
+    />
+    <!-- Content -->
+    <div class="flex flex-col gap-y-10 px-2 py-5 lg:px-5">
+      <TeamContainer team="The Board 💼" />
+      <TeamContainer team="Tech Kids 💻" />
+      <TeamContainer team="Art Department 🎨" />
+      <TeamContainer team="Communications and PR 📧" />
+      <TeamContainer team="Content Creators 🤳" />
+    </div>
+  </section>
+  <ScrollUp client:only="svelte" />
+</Layout>

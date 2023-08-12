@@ -10,11 +10,11 @@ export const projectsData = [
     Link: "https://alyamamah-semester-progress.netlify.app/",
   },
   {
-    name: "Tuwaiq Classrooms Availability 📚",
+    name: "Tuwaiq Rooms Availability 📚",
     description: "Find Empty Rooms Easily!",
 
-    image: "/images/projects/Tuwaiq Classrooms Availability.avif",
-    imageAlt: "A ScreenShot Of Tuwaiq Classrooms Availability Project",
+    image: "/images/projects/Tuwaiq Rooms Availability.avif",
+    imageAlt: "A ScreenShot Of Tuwaiq Rooms Availability Project",
 
     Github: "https://github.com/GDSC-YU/tuwaiq-classrooms",
     Link: "https://tc.gdscyu.com/",

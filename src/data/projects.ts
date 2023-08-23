@@ -19,14 +19,4 @@ export const projectsData = [
     Github: "https://github.com/GDSC-YU/tuwaiq-classrooms",
     Link: "https://tc.gdscyu.com/",
   },
-  {
-    name: "Al-Yamamah Application 🤩",
-    description: "A Modern Replacement For The EduGate!",
-
-    image: "/images/projects/Al-Yamamah.avif",
-    imageAlt: "A ScreenShot Of Al-Yamamah Project",
-
-    Github: "https://github.com/YazeedAlKhalaf/alyamamah",
-    Link: "https://alyamamah.alkhalaf.dev/",
-  },
 ];
